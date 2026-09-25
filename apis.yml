@@ -1,23 +1,73 @@
 aid: anique
+
 name: Anique
-description: 'Anique is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://anique.jp/wp-content/uploads/2024/08/IMG_20240809_1922477112.jpg
+
+description: Anique Inc. is a Japan‑based company that maximizes the value of intellectual property and brands through both real‑world and digital
+  experiences. It operates Anique Shop, Anique Museum, AR and digital collection services, creating limited‑edition merchandise and virtual exhibitions
+  that connect creators with global fans. The company emphasizes creative content, IP‑driven experiences, and supports creators in both physical
+  and digital realms.
+
 url: https://raw.githubusercontent.com/api-evangelist/anique/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- IP
+- Digital
+- Merchandise
+- Japan
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/anique-llms.txt
+- type: WellKnown
+  url: well-known/anique-well-known.yml
+- type: Hosts
+  url: hosts/anique-hosts.yml
+- type: Vendors
+  url: vendors/anique-vendors.yml
+- type: ChangeLog
+  url: https://anique.jp/releases
+- type: DomainSecurity
+  url: security/anique-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/anique
+  url: https://anique.jp
+- type: Documentation
+  url: https://anique.jp/en/about/
+- type: Services
+  url: https://anique.jp/en/services/
+- type: Shop
+  url: https://shop.anique.jp
+
+apis:
+- name: Anique GraphQL API
+  description: GraphQL API for Anique services
+  humanURL: https://shop.anique.jp/api/graphql
+  baseURL: https://shop.anique.jp/api/graphql
+  aid: anique:anique-graphql-api
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
